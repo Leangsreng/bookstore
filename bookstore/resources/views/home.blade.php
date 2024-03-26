@@ -217,7 +217,7 @@
         </div>
     </div> --}}
 
-    @foreach($products as $item)
+    {{-- @foreach($products as $item)
         <div class="ms-3">
             <div class="card" style="width: 240px; height: 360px">
                 <div class="image-wrapper">
@@ -240,7 +240,7 @@
                 <a class="stretched-link" href="#"></a>
             </div>
         </div>
-    @endforeach
+    @endforeach --}}
     
 
    
