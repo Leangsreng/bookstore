@@ -105,7 +105,8 @@
             <div class="card" style="width: 240px; height: 360px">
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                        src="{{ asset('img/recommendations/' . $item->image) }}" alt="{{ $item->title }}"
+                        src="{{ asset('images/' . $item->image) }}"
+                        alt="{{ $item->name }}"
                         style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">{{ $item->name ?: 'No title available' }}</h5>
