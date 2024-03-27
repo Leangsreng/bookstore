@@ -109,7 +109,7 @@
                     <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
                         <a class="ms-md-2 logo navbar-brand" href="/home">
                             <img src="pos/assets/img/brand.svg" height="35" />
-                            <span>{{ config('app.name') }}</span>
+                            <span>CADT</span>
                         </a>
                     </div>
                     <!-- Left elements -->

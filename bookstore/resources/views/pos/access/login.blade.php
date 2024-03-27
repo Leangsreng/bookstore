@@ -6,7 +6,7 @@
 
             <div class="d-flex justify-content-center py-4">
                 <a class="logo d-flex align-items-center" href="/home">
-                    <span class="d-none d-lg-block fs-1 fw-bold fst-italic">{{ config('app.name') }}</span>
+                    <span class="d-none d-lg-block fs-1 fw-bold fst-italic">WEB_APP FINAL PROJECT</span>
                 </a>
             </div><!-- End Logo -->
 
@@ -59,10 +59,6 @@
                         <p class="small mb-0">Not have an account? <a href="/shop-register">Register</a></p>
                     </div>
                 </div>
-            </div>
-
-            <div class="credits text-center">
-                Designed by <a href="/kyriten">kyridev</a>
             </div>
 
         </div>
