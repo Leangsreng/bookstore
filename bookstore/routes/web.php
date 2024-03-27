@@ -25,6 +25,7 @@ use App\Http\Controllers\RegisterController;
 // });
 
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
+Route::get('/home', [PosController::class, 'index2'])->name('Pos');
 
 //Profile Routes
 Route::get('/edit-profile', [UserController::class, 'edit'])->name('profile');

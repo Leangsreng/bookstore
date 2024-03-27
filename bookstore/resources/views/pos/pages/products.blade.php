@@ -44,18 +44,7 @@
                                     @forelse ($products as $item)
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
-                                            <td>
-                                                @if ($item->image)
-                                                    <img id="imgPreview" src="{{ asset('storage/' . $item->image) }}"
-                                                        alt="{{ $item->name }}" style="height: 132px; width: 188px" />
-                                                @else
-                                                    <img id="imgPreview"
-                                                        src="http://www.proedsolutions.com/wp-content/themes/micron/images/placeholders/placeholder_large.jpg"
-                                                        alt="image placeholder" style="height: 132px; width: 188px" />
-                                                @endif
-                                                <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}"
-                                                    style="height: 132px; width: 188px">
-                                            </td>
+                                            <td><img src="{{ asset('storage/' . $item->image) }}" width="100px"></td>
                                             <td>{{ $item->name }}</td>
                                             {{-- <td>{{ $item->category->name }}</td> --}}
                                             <td>{{ $item->description }}</td>

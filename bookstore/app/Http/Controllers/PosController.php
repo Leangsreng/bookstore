@@ -26,6 +26,14 @@ class PosController extends Controller
         ], compact('products'));
     }
 
+    public function index2()
+    {
+        $products = Pos::all();
+        return view('home', [
+            'title' => 'View Product',
+        ], compact('products'));
+    }
+
     public function addproduct()
     {
         return view('pos.pages.addproduct', [
@@ -34,35 +42,34 @@ class PosController extends Controller
     }
 
     public function storeproduct(Request $request)
-{
-    // Dump the submitted data to debug
-    
-    $validatedData = $request->validate([
-        'image' => 'image|file|max:1024',
-        'name' => 'required|max:15',
-        'description' => 'required|max:255',
-        'harga' => 'required',
-        'weight' => 'required',
-        'stock' => 'required',
-    ]);
+    {
+        // Dump the submitted data to debug
+        // dd($request->all());
+        
+        $validatedData = $request->validate([
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required|max:15',
+            'description' => 'required|max:255',
+            'harga' => 'required',
+            'weight' => 'required',
+            'stock' => 'required',
+        ]);
 
-    // Check if validation passes
-    if ($request->file('image')) {
-        $validatedData['image'] = $request->file('image')->store('product-images');
-    }
+        // Check if validation passes
+        $input = $request->all();
 
-    try {
-        Pos::create($validatedData);
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
+
+        Pos::create($input);
         $request->session()->flash('success', 'Product has been added');
-    } catch (\Exception $e) {
-        \Log::error('Error creating product: ' . $e->getMessage());
-        // Flash an error message
-        $request->session()->flash('error', 'An error occurred while adding the product');
-    }
-    
 
-    return redirect('/products');
-}
+        return redirect('/products');
+    }
 
     public function edit($id)
     {
@@ -192,6 +199,7 @@ class PosController extends Controller
     public function show(Pos $pos)
     {
         //
+
     }
 
     /**

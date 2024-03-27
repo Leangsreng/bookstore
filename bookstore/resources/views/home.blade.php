@@ -99,149 +99,36 @@
 @section('recommendations')
     <!-- RECOMMENDATIONS -->
     <h5 class="fw-semibold mt-4">RECOMMENDATIONS</h5>
-
-    {{-- Row 1 --}}
-    {{-- <div class="d-flex justify-content-between text-center mt-3">
-        <div class="card" style="width: 240px; height: 360px">
-            <div class="image-wrapper">
-                <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                    src="{{ asset('img/recommendations/lord_of_mysteries.png') }}" alt=""
-                    style="height: 220px; width: 70%" />
-            </div>
-            <h5 class="card-title mt-2 fs-6 px-3">
-                lord of mysteries
-                <span class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
-            </h5>
-            <div class="card-footer mb-3 border-0">
-                <div class="row mt-auto">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">$</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-
-                </div>
-            </div>
-            <a class="stretched-link" href="#"></a>
-        </div>
-        <div class="ms-3">
-            <div class="card" style="width: 240px; height: 360px">
-                <div class="image-wrapper">
-                    <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                        src="{{ asset('img/recommendations/shadow_slave.png') }}" alt=""
-                        style="height: 220px; width: 70%" />
-                </div>
-                <h5 class="card-title mt-2 fs-6 px-3">
-                    Shadow Slave
-                    <span
-                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
-                </h5>
-                <div class="card-footer mb-3 border-0">
-                    <div class="row mt-auto">
-                        <div class="col">
-                            <small style="color: rgb(67, 170, 255)">$</small><big class="me-1"
-                                style="color: rgb(67, 170, 255)">73.000</big>
-                        </div>
-                    </div>
-                </div>
-                <a class="stretched-link" href="#"></a>
-            </div>
-        </div>
-        <div class="ms-3">
-            <div class="card" style="width: 240px; height: 360px">
-                <div class="image-wrapper">
-                    <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                        src="{{ asset('img/recommendations/Harry Potter and The Philosopher’s Stone.jpg') }}"
-                        alt="" style="height: 220px; width: 70%" />
-                </div>
-                <h5 class="card-title mt-2 fs-6 px-3">
-                    Harry Potter
-                    <span
-                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
-                </h5>
-                <div class="card-footer mb-3 border-0">
-                    <div class="row mt-auto">
-                        <div class="col">
-                            <small style="color: rgb(67, 170, 255)">$</small><big class="me-1"
-                                style="color: rgb(67, 170, 255)">73.000</big>
-                        </div>
-                    </div>
-                </div>
-                <a class="stretched-link" href="#"></a>
-            </div>
-        </div>
-        <div class="ms-3">
-            <div class="card" style="width: 240px; height: 360px">
-                <div class="image-wrapper">
-                    <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                        src="{{ asset('img/recommendations/Celestial_Shadow.png') }}" alt=""
-                        style="height: 220px; width: 70%" />
-                </div>
-                <h5 class="card-title mt-2 fs-6 px-3">
-                    Celestial Shadow
-                    <span
-                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
-                </h5>
-                <div class="card-footer mb-3 border-0">
-                    <div class="row mt-auto">
-                        <div class="col">
-                            <small style="color: rgb(67, 170, 255)">$</small><big class="me-1"
-                                style="color: rgb(67, 170, 255)">73.000</big>
-                        </div>
-                    </div>
-                </div>
-                <a class="stretched-link" href="#"></a>
-            </div>
-        </div>
-        <div class="ms-3">
-            <div class="card" style="width: 240px; height: 360px">
-                <div class="image-wrapper">
-                    <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                        src="{{ asset('img/recommendations/The_Beginning_After_The_End.png') }}" alt=""
-                        style="height: 220px; width: 70%" />
-                </div>
-                <h5 class="card-title mt-2 fs-6 px-3">
-                    The Beginning After The End (BOOK 9)
-                    <span
-                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
-                </h5>
-                <div class="card-footer mb-3 border-0">
-                    <div class="row mt-auto">
-                        <div class="col">
-                            <small style="color: rgb(67, 170, 255)">$</small><big class="me-1"
-                                style="color: rgb(67, 170, 255)">73.000</big>
-                        </div>
-                    </div>
-                </div>
-                <a class="stretched-link" href="#"></a>
-            </div>
-        </div>
-    </div> --}}
-
-    {{-- @foreach($products as $item)
-        <div class="ms-3">
-            <div class="card" style="width: 240px; height: 360px">
-                <div class="image-wrapper">
-                    <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                        src="{{ asset('img/recommendations/'.$item->image) }}" alt=""
-                        style="height: 220px; width: 70%" />
-                </div>
-                <h5 class="card-title mt-2 fs-6 px-3">
-                    {{ $item->title }}
-                    <span class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
-                </h5>
-                <div class="card-footer mb-3 border-0">
-                    <div class="row mt-auto">
-                        <div class="col">
-                            <small style="color: rgb(67, 170, 255)">$</small><big class="me-1"
-                                style="color: rgb(67, 170, 255)">{{ $item->price }}</big>
-                        </div>
-                    </div>
-                </div>
-                <a class="stretched-link" href="#"></a>
-            </div>
-        </div>
-    @endforeach --}}
-    
-
    
+    <div class="d-flex justify-content-between text-center mt-3">
+        @forelse ($products as $item)
+            <div class="card" style="width: 240px; height: 360px">
+                <div class="image-wrapper">
+                    <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
+                        src="{{ asset('img/recommendations/' . $item->image) }}" alt="{{ $item->title }}"
+                        style="height: 220px; width: 70%" />
+                </div>
+                <h5 class="card-title mt-2 fs-6 px-3">{{ $item->name ?: 'No title available' }}</h5>
+                <span class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">{{ $item->category ?: 'Novel' }}</span>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">$</small>
+                            <big class="me-1" style="color: rgb(67, 170, 255)">{{ $item->harga ?: 'N/A' }}</big>
+                        </div>
+                    </div>
+                </div>
+                <a class="stretched-link" href="{{ route('products.show', $item->id) }}"></a>
+            </div>
+        @empty
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">No products available.</p>
+                </div>
+            </div>
+        @endforelse
+    </div>
 @endsection
+
+
+
